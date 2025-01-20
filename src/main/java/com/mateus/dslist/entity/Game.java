@@ -26,13 +26,15 @@ public class Game {
     private Integer year;
     @Column(name = "genre", nullable = false, length = 100)
     private String genre;
-    @Column(name = "platform", nullable = false, length = 150)
-    private String platform;
+    @Column(name = "platforms", nullable = false, length = 150)
+    private String platforms;
+    @Column(name = "score")
+    private Double score;
     @Column(name = "img_url", length = 200)
     private String imgUrl;
-    @Column(name = "short_description", nullable = false, length = 100)
+    @Column(name = "short_description", nullable = false, columnDefinition = "TEXT")
     private String shortDescription;
-    @Column(name = "long_description", length = 200)
+    @Column(name = "long_description", columnDefinition = "TEXT")
     private String longDescription;
 
     @Override
