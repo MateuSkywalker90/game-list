@@ -1,6 +1,7 @@
 package com.mateus.dslist.service;
 
 import com.mateus.dslist.entity.Game;
+import com.mateus.dslist.projection.GameProjection;
 import com.mateus.dslist.repository.GameRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -27,4 +28,8 @@ public class GameService {
         );
     }
 
+    @Transactional(readOnly = true)
+    public List<GameProjection> findByList(Long listId) {
+        return gameRepository.searchByList(listId);
+    }
 }
