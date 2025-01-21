@@ -4,7 +4,6 @@ import com.mateus.dslist.entity.Game;
 import com.mateus.dslist.web.dto.GameCreateDto;
 import com.mateus.dslist.web.dto.GameResponseDto;
 import org.modelmapper.ModelMapper;
-import org.modelmapper.PropertyMap;
 
 import java.util.List;
 import java.util.stream.Collectors;
